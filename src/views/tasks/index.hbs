@@ -1,0 +1,49 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+
+        <table class="table-fixed w-full">
+            <thead>
+                <tr class="bg-green-500 text-white">
+                    <th class="">NSS</th>
+                    <th class="">Medicamentos</th>
+                    <th class="">Fecha de Registro</th>
+                    <th class="">Fecha de Receta</th>
+                    <th class="">Estatus</th>
+                    <th class="">Nombre del Paciente</th>
+                    <th class="">Cantidad</th>
+                    <th class="">Folio de la Receta</th>
+                    <th class="">Teléfono</th>
+                    <th class="">Anotaciones</th>
+                    <th class="">Turno</th>
+                    <th class=""></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each registro}}
+                <tr>
+                    <td class="">{{nss}}</td>
+                    <td class="">{{medicamentos}}</td>
+                    <td class="">{{registro}}</td>
+                    <td class="">{{receta}}</td>
+                    <td class="">{{estatus}}</td>
+                    <td class="">{{nombre}}</td>
+                    <td class="">{{cantidad}}</td>
+                    <td class="">{{folio}}</td>
+                    <td class="">{{telefono}}</td>
+                    <td class="">{{anotaciones}}</td>
+                    <td class="">{{turno}}</td>
+                    <td class="">
+                        <form action="/task/delete" method="POST" class="mx-2">
+                            <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                        <i class="fas fa-trash"></i></button>
+                        </form>
+                        
+                        <button class="bg-green-500 text-white px-3 py-1 rounded-sm">
+                        <i class="fas fa-pen"></i></button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
